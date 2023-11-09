@@ -1,12 +1,12 @@
-import UsersItem from './UsersItem.tsx';
+import UserItem from './UserItem.tsx';
 import { IUsers } from '../../types';
 import { FC } from 'react';
 
-const Users: FC<IUsers> = ({users}) => {
+const Users: FC<IUsers> = ({ users }) => {
   return (
-    <div>
-      {users.map((user)=>(
-        <UsersItem key={user.id} user={user}/>
+    <div className="py-3">
+      {users.map((user) => (
+        <UserItem key={user.id} user={user} />
       ))}
     </div>
   );

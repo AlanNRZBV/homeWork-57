@@ -1,11 +1,9 @@
-import users from './componetns/Users/Users.tsx';
-
 export interface IUserForm {
   onSubmit: (user: IUser) => void;
 }
 
 export interface IUser {
-  id: number
+  id: number;
   name: string;
   email: string;
   isActive: boolean;
@@ -13,10 +11,9 @@ export interface IUser {
 }
 
 export interface IUsers {
-  users: IUser[]
+  users: IUser[];
 }
 
 export interface IUsersItem {
- user: IUser
+  user: IUser;
 }
-

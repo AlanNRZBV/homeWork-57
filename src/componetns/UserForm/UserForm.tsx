@@ -4,8 +4,8 @@ import { IUserForm } from '../../types';
 const UserForm: FC<IUserForm> = ({ onSubmit }) => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
-  const [checkbox, setCheckbox] = useState<boolean>(false)
-  const [role, setRole]=useState<string>('')
+  const [checkbox, setCheckbox] = useState<boolean>(false);
+  const [role, setRole] = useState<string>('');
 
   const handleChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -19,9 +19,9 @@ const UserForm: FC<IUserForm> = ({ onSubmit }) => {
     setCheckbox(event.target.checked);
   };
 
-  const handleChangeRole = (event: React.ChangeEvent<HTMLSelectElement>)=>{
-    setRole(event.target.value)
-  }
+  const handleChangeRole = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setRole(event.target.value);
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,8 +30,8 @@ const UserForm: FC<IUserForm> = ({ onSubmit }) => {
       name: name,
       email: email,
       isActive: checkbox,
-      role: role
-    })
+      role: role,
+    });
   };
 
   return (
@@ -68,7 +68,13 @@ const UserForm: FC<IUserForm> = ({ onSubmit }) => {
         />
       </div>
       <div className="form-check mb-3">
-        <input className="form-check-input" type="checkbox" id="isActive" checked={checkbox} onChange={handleChangeCheckbox}/>
+        <input
+          className="form-check-input"
+          type="checkbox"
+          id="isActive"
+          checked={checkbox}
+          onChange={handleChangeCheckbox}
+        />
         <label className="form-check-label" htmlFor="isActive">
           Set active
         </label>
@@ -81,7 +87,9 @@ const UserForm: FC<IUserForm> = ({ onSubmit }) => {
           <option value="Admin">Admin</option>
         </select>
       </div>
-      <button type="submit">submit</button>
+      <button className="btn btn-primary" type="submit">
+        Submit
+      </button>
     </form>
   );
 };

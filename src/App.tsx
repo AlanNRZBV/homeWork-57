@@ -20,10 +20,10 @@ const App = () => {
         <div className="container">
           <div className="row mt-5">
             <div className="col border border-1 rounded-3 shadow me-2 py-3">
-              <UserForm onSubmit={addUser}/>
+              <UserForm onSubmit={addUser} />
             </div>
             <div className="col border border-1 rounded-3 shadow ms-2">
-              <Users users={users}/>
+              <Users users={users} />
             </div>
           </div>
         </div>
